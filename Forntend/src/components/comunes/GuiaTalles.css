@@ -1,0 +1,284 @@
+/* Estilos para la Guía de Talles - Versión Compacta */
+.guia-talles-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 1.5rem 0; /* Reducido de 2rem */
+}
+
+.guia-header {
+  text-align: center;
+  margin-bottom: 2rem; /* Reducido de 2.5rem */
+}
+
+.guia-title {
+  font-size: 2rem; /* Reducido de 2.5rem */
+  font-weight: 700;
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.guia-subtitle {
+  color: #6c757d;
+  font-size: 1rem; /* Reducido de 1.2rem */
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tarjetas más compactas */
+.guia-card {
+  background: white;
+  border: none;
+  border-radius: 16px; /* Reducido de 20px */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem; /* Reducido de 2rem */
+}
+
+.guia-card:hover {
+  transform: translateY(-3px); /* Reducido de -5px */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12); /* Sombra más sutil */
+}
+
+.guia-card .guia-card-header {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  color: white;
+  padding: 1rem 1.25rem; /* Reducido de 1.5rem */
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.guia-card-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px; /* Reducido de 100px */
+  height: 80px; /* Reducido de 100px */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(25px, -25px); /* Ajustado */
+}
+
+.guia-card-header h5 {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem; /* Reducido de 1.3rem */
+  position: relative;
+  z-index: 2;
+}
+
+/* Instrucciones más compactas */
+.instrucciones {
+  padding: 0.75rem 0; /* Reducido de 1rem */
+}
+
+.instruccion-item {
+  display: flex;
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  padding-bottom: 1rem; /* Reducido de 1.5rem */
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.instruccion-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.instruccion-numero {
+  background: rgb(7, 7, 104);
+  color: white;
+  width: 32px; /* Reducido de 40px */
+  height: 32px; /* Reducido de 40px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem; /* Reducido de 1.2rem */
+  margin-right: 1rem; /* Reducido de 1.5rem */
+  flex-shrink: 0;
+}
+
+.instruccion-contenido h6 {
+  font-weight: 700;
+  color: rgb(7, 7, 104);
+  margin-bottom: 0.4rem; /* Reducido de 0.5rem */
+  font-size: 1rem; /* Reducido de 1.1rem */
+}
+
+.instruccion-contenido p {
+  color: #6c757d;
+  margin-bottom: 0;
+  line-height: 1.5; /* Reducido de 1.6 */
+  font-size: 0.9rem; /* Añadido para texto más pequeño */
+}
+
+/* Tabla de talles más compacta */
+.tabla-talles {
+  margin: 0;
+  width: 100%;
+  font-size: 0.85rem; /* Reducido */
+}
+
+.tabla-talles thead th {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem; /* Reducido de 1rem */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; /* Reducido de 1px */
+  font-size: 0.8rem; /* Reducido de 0.9rem */
+  text-align: center;
+}
+
+.tabla-talles tbody td {
+  padding: 0.75rem; /* Reducido de 1rem */
+  border: none;
+  border-bottom: 1px solid #f1f3f4;
+  text-align: center;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.tabla-talles tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.tabla-talles tbody tr:nth-child(even) {
+  background-color: rgba(7, 7, 104, 0.05);
+}
+
+/* Consejos más compactos */
+.consejos-lista {
+  padding-left: 1.25rem; /* Reducido de 1.5rem */
+  margin-bottom: 0;
+}
+
+.consejos-lista li {
+  margin-bottom: 0.75rem; /* Reducido de 1rem */
+  color: #2c3e50;
+  line-height: 1.5; /* Reducido de 1.6 */
+  font-size: 0.9rem; /* Añadido */
+}
+
+.consejos-lista li:last-child {
+  margin-bottom: 0;
+}
+
+.consejos-lista li strong {
+  color: rgb(7, 7, 104);
+}
+
+/* Marcas más compactas */
+.marca-info {
+  padding: 0.4rem 0; /* Reducido de 0.5rem */
+}
+
+.marca-item {
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  padding-bottom: 1rem; /* Reducido de 1.5rem */
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.marca-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.marca-item h6 {
+  font-weight: 700;
+  color: rgb(7, 7, 104);
+  margin-bottom: 0.4rem; /* Reducido de 0.5rem */
+  font-size: 1rem; /* Reducido de 1.1rem */
+}
+
+.marca-item p {
+  color: #6c757d;
+  margin-bottom: 0;
+  line-height: 1.5; /* Reducido de 1.6 */
+  font-size: 0.9rem; /* Añadido */
+}
+
+/* Nota final más compacta */
+.guia-footer {
+  margin-top: 0.75rem; /* Reducido de 1rem */
+}
+
+.guia-nota {
+  background: linear-gradient(135deg, #e3f2fd 0%, #c3cdd4 100%);
+  border: none;
+  border-radius: 12px; /* Reducido de 16px */
+  padding: 1.25rem; /* Reducido de 1.5rem */
+  border-left: 4px solid rgb(7, 7, 104);
+}
+
+.guia-nota h5 {
+  color: rgb(7, 7, 104);
+  font-weight: 700;
+  margin-bottom: 0.4rem; /* Reducido de 0.5rem */
+  font-size: 1.1rem; /* Reducido de 1.2rem */
+}
+
+.guia-nota p {
+  color: #2c3e50;
+  margin-bottom: 0;
+  line-height: 1.5; /* Reducido de 1.6 */
+  font-size: 0.9rem; /* Añadido */
+}
+
+/* Card body más compacto */
+.guia-card .card-body {
+  padding: 1.25rem; /* Reducido de padding por defecto */
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+  .guia-title {
+    font-size: 1.75rem; /* Reducido de 2rem */
+  }
+
+  .guia-subtitle {
+    font-size: 0.95rem; /* Reducido de 1.1rem */
+  }
+
+  .instruccion-item {
+    flex-direction: column;
+  }
+
+  .instruccion-numero {
+    margin-bottom: 0.75rem; /* Reducido de 1rem */
+    margin-right: 0;
+  }
+
+  .guia-card .card-body {
+    padding: 1rem; /* Más compacto en móvil */
+  }
+}
+
+@media (max-width: 576px) {
+  .guia-talles-container {
+    padding: 1rem 0; /* Reducido */
+  }
+
+  .guia-title {
+    font-size: 1.5rem; /* Reducido de 1.8rem */
+  }
+
+  .guia-card-header h5 {
+    font-size: 1rem; /* Reducido de 1.1rem */
+  }
+
+  .guia-card .card-body {
+    padding: 0.875rem; /* Más compacto */
+  }
+}

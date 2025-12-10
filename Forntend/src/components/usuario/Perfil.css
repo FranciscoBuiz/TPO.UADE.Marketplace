@@ -1,0 +1,751 @@
+.perfil-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.perfil-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.perfil-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.perfil-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.perfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-card .perfil-card-header {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  color: white;
+  padding: 1.5rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-card-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(30px, -30px);
+}
+
+.perfil-card-header h5 {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.perfil-card-body {
+  padding: 1.5rem;
+}
+
+/* Información personal */
+/* INFO ITEM MODERNO Y LIMPIO */
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.25rem;
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  border-left: 6px solid rgb(7, 7, 104);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: #f0f4ff;
+  transform: scale(1.01);
+}
+
+/* TEXTO DE ETIQUETA (ej: NOMBRE COMPLETO) */
+.info-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0d1b2a;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  opacity: 0.8;
+  padding-left: 25px;
+}
+
+/* TEXTO DE VALOR (ej: Ana Barbieri) */
+.info-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 25px;
+}
+
+
+.info-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-right: 90px;
+}
+
+/* Tabla de historial */
+.historial-table {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  margin: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table thead th:nth-child(1) {
+  width: 15%;
+}
+
+.table thead th:nth-child(2) {
+  width: 25%;
+}
+
+.table thead th:nth-child(3) {
+  width: 12%;
+}
+
+.table thead th:nth-child(4) {
+  width: 13%;
+}
+
+.table thead th:nth-child(5) {
+  width: 35%;
+}
+
+.table thead th {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.table tbody td {
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.producto-item {
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.estado-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detalles-btn {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.detalles-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.detalles-contenido {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-left: 4px solid #3498db;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.detalles-contenido strong {
+  color: #2c3e50;
+  display: inline-block;
+  min-width: 140px;
+}
+
+/* Configuración */
+.config-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+  border-left: 4px solid rgb(7, 7, 104);
+}
+
+.config-title {
+  color: rgb(7, 7, 104);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.form-check {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-check:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+}
+
+.form-check-input:checked {
+  background-color: rgb(7, 7, 104);
+  border-color: rgb(7, 7, 104);
+}
+
+.form-check-label {
+  font-weight: 500;
+  color: rgb(7, 7, 104);
+  margin-left: 0.5rem;
+}
+
+.info-alert {
+  background: linear-gradient(135deg, #e3f2fd 0%, #c3cdd4 100%);
+  border: none;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border-left: 4px solid rgb(7, 7, 104);
+}
+
+.info-alert h6 {
+  color: rgb(7, 7, 104);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info-alert p {
+  color: rgb(7, 7, 104);
+  margin: 0;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: #bdc3c7;
+  margin-bottom: 1rem;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.empty-text {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+/* Formulario de edición */
+.form-control {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+  border-color: #3498db;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.password-change-section {
+  border-left: 4px solid #3498db;
+  margin-bottom: 1.5rem;
+}
+
+/* Animaciones */
+.animate__animated {
+  animation-duration: 0.5s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil-title {
+    font-size: 2rem;
+  }
+
+  .perfil-card-body {
+    padding: 1.5rem;
+  }
+
+  .table thead th:nth-child(1) {
+    width: 20%;
+  }
+
+  .table thead th:nth-child(2) {
+    width: 30%;
+  }
+
+  .table thead th:nth-child(3) {
+    width: 15%;
+  }
+
+  .table thead th:nth-child(4) {
+    width: 15%;
+  }
+
+  .table thead th:nth-child(5) {
+    width: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .perfil-container {
+    padding: 1rem 0;
+  }
+
+  .table thead th:nth-child(5) {
+    width: 25%;
+  }
+}
+
+.perfil-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BOTONES MEJORADOS DEL PERFIL */
+
+/* Botón de Editar - Elegante y moderno */
+.perfil-card-header .btn-outline-primary {
+  background: linear-gradient(135deg, #1605a9 0%, #03379e 100%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-card-header .btn-outline-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.perfil-card-header .btn-outline-primary:hover::before {
+  left: 100%;
+}
+
+.perfil-card-header .btn-outline-primary:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Botón de Cancelar - Elegante gris */
+.perfil-card-header .btn-outline-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-card-header .btn-outline-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.perfil-card-header .btn-outline-secondary:hover::before {
+  left: 100%;
+}
+
+.perfil-card-header .btn-outline-secondary:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
+}
+
+.perfil-card-header .btn-outline-secondary:disabled {
+  background: #adb5bd;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(173, 181, 189, 0.2);
+}
+
+/* Botón de Guardar - Atractivo azul */
+.perfil-card-header .btn-primary {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(5, 5, 80) 100%);
+  border: none;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(7, 7, 104, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.perfil-card-header .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.perfil-card-header .btn-primary:hover::before {
+  left: 100%;
+}
+
+.perfil-card-header .btn-primary:hover {
+  background: linear-gradient(135deg, rgb(5, 5, 80) 0%, rgb(3, 3, 60) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(7, 7, 104, 0.4);
+}
+
+.perfil-card-header .btn-primary:disabled {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  transform: none;
+  box-shadow: 0 2px 8px rgba(108, 117, 125, 0.2);
+  cursor: not-allowed;
+}
+
+/* Contenedor de botones */
+.perfil-card-header > div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Efectos adicionales para todos los botones */
+.perfil-card-header .btn {
+  border: none !important;
+  outline: none !important;
+  user-select: none;
+}
+
+.perfil-card-header .btn:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+.perfil-card-header .btn:active {
+  transform: translateY(0px) !important;
+}
+
+/* Animación de pulso para el botón guardar cuando está cargando */
+.perfil-card-header .btn-primary:disabled {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(108, 117, 125, 0.4);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+  }
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+  .perfil-card-header .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .perfil-card-header > div {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .perfil-card-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .perfil-card-header > div {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Estilos para el modal de confirmación de Bootstrap */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 1rem);
+  margin: 0.5rem auto;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(7, 7, 104) 100%);
+  color: white;
+  border: none;
+  padding: 1.5rem;
+}
+
+.modal-header .modal-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 2rem;
+  background: #fdfdfd;
+}
+
+.modal-body p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.modal-body ul {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  border-left: 4px solid rgb(7, 7, 104);
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1.5rem 2rem;
+  background: #fdfdfd;
+  gap: 1rem;
+}
+
+/* Botones del modal mejorados */
+.modal-footer .btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+}
+
+.modal-footer .btn-primary {
+  background: linear-gradient(135deg, rgb(7, 7, 104) 0%, rgb(5, 5, 80) 100%);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.modal-footer .btn-primary:hover {
+  background: linear-gradient(135deg, rgb(5, 5, 80) 0%, rgb(3, 3, 60) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(7, 7, 104, 0.4);
+}
+
+.modal-footer .btn-primary:disabled {
+  background: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Backdrop del modal */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* Animación del modal */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+
+.info-badge {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgb(0, 0, 0);
+}
+

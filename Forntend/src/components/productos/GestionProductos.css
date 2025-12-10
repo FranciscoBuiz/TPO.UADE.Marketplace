@@ -1,0 +1,537 @@
+.gestion-productos-full-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.lista-productos {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Tarjeta de productos */
+.lista-productos .card {
+  border: none;
+  box-shadow: 0 0.375em 0.9375em rgba(0, 0, 0, 0.1);
+  border-radius: 0.75em;
+  overflow-x: auto;
+}
+
+.lista-productos .card-header {
+  background: rgb(7, 7, 104);
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1em 1.5em;
+  border-top-left-radius: 0.75em;
+  border-top-right-radius: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-header {
+  background: rgba(255, 255, 255, 0.2);    /* QUITA EL ROJO - fondo transparente */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  border-radius: 12px;                     /* MÁS CHICO */
+  font-size: 0.5rem;                       /* MUY CHICO - texto pequeño */
+  font-weight: 500;
+  padding: 4px 8px;                        /* MUY CHICO - padding pequeño */
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;                          /* A LA DERECHA - no se comprime */
+  margin-left: auto;                       /* A LA DERECHA - empuja hacia la derecha */
+  max-width: 120px;                        /* LIMITA EL ANCHO MÁXIMO */
+}
+
+.btn-header:hover {
+  background: rgba(255, 255, 255, 0.3);    /* HOVER SIN ROJO */
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.lista-productos .card-header .tituloContainerGestion {
+  color: white;
+  flex-grow: 1;
+}
+
+/* Filtro de búsqueda */
+.filtro-busqueda {
+  margin-bottom: 1.5rem;
+}
+
+.filtro-busqueda .form-control {
+  border-radius: 25px;
+  padding: 12px 20px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filtro-busqueda .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.filtro-busqueda .form-control::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Tabla */
+.lista-productos table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.3em;
+  table-layout: auto; /* Permite que las columnas se ajusten al contenido */
+  font-size: 0.9rem;
+}
+
+/* Encabezados */
+.lista-productos thead th {
+  color: white;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  background-color: #34495e;
+  border: 1px solid #ffffff33;
+  white-space: nowrap;
+}
+
+/* Filas más angostas */
+.lista-productos tbody tr {
+  background: white;
+  box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.05);
+  border-radius: 0.625em;
+  transition: background-color 0.3s ease;
+  height: 2.5em; /* Menor altura */
+}
+
+.lista-productos tbody tr:hover {
+  background-color: #d6eaf8;
+}
+
+/* Celdas */
+.lista-productos tbody td {
+  padding: 0.4em 0.6em;
+  text-align: center;
+  vertical-align: middle;
+  border: none !important;
+  color: #34495e;
+  white-space: nowrap; /* Mantiene el contenido en una línea */
+}
+
+/* Botones mejorados dentro de la tabla */
+.lista-productos tbody button {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.lista-productos .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  background: transparent;
+}
+
+.lista-productos .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  border-color: transparent;
+}
+
+.lista-productos .btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+  background: transparent;
+}
+
+.lista-productos .btn-outline-danger:hover {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  border-color: transparent;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 15px;
+}
+
+/* Modal formulario - más compacto */
+.modal-formulario {
+  width: 100%;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tarjeta del modal */
+.modal-formulario .card {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-formulario .card-header {
+  background: rgb(7, 7, 104);
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título del modal en blanco */
+.modal-title {
+  color: white !important;
+  margin: 0;
+  font-weight: 700;
+}
+
+.modal-formulario .card-body {
+  padding: 20px;
+  background: #fdfdfd;
+}
+
+/* Botón cerrar */
+.btn-close-modal {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.btn-close-modal:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Contenedor del formulario reorganizado */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reducido de 15px a 12px */
+  margin-bottom: 18px; /* Reducido de 25px a 18px */
+}
+
+/* Filas del formulario */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px; /* Reducido de 15px a 12px */
+}
+
+.form-row-full {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 6px; /* Reducido de 8px a 6px */
+  font-size: 0.85rem; /* Reducido de 0.9rem a 0.85rem */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px 12px; /* Reducido de 12px 15px a 10px 12px */
+  font-size: 0.9rem; /* Reducido de 0.95rem a 0.9rem */
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  background: #f8f9fa;
+  outline: none;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 70px; /* Reducido de 80px a 70px */
+}
+
+/* Sección de stock */
+.stock-section {
+  background: #f8f9fa;
+  padding: 15px; /* Reducido de 20px a 15px */
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+  margin-bottom: 18px; /* Reducido de 25px a 18px */
+}
+
+.stock-title {
+  font-size: 0.9rem; /* Reducido de 1rem a 0.9rem */
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px; /* Reducido de 15px a 12px */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Grid de talles compacto */
+.talles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Reducido de 80px a 75px */
+  gap: 10px; /* Reducido de 12px a 10px */
+  max-width: 100%;
+}
+
+.talle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 10px 6px; /* Reducido de 12px 8px a 10px 6px */
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.talle-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.talle-label {
+  font-size: 0.75rem; /* Reducido de 0.8rem a 0.75rem */
+  font-weight: 700;
+  margin-bottom: 6px; /* Reducido de 8px a 6px */
+  color: #2c3e50;
+  text-align: center;
+}
+
+.talle-input {
+  width: 55px; /* Reducido de 60px a 55px */
+  text-align: center;
+  padding: 6px 4px; /* Reducido de 8px 4px a 6px 4px */
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  font-weight: 600;
+  font-size: 0.85rem; /* Reducido de 0.9rem a 0.85rem */
+  transition: all 0.3s ease;
+}
+
+.talle-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Botones del formulario */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 15px; /* Reducido de 20px a 15px */
+  border-top: 2px solid #e9ecef;
+}
+
+.modal-formulario .btn-success {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 20px;
+  font-size: 0.85rem; /* Reducido de 0.9rem a 0.85rem */
+  font-weight: 600;
+  padding: 10px 20px; /* Reducido de 12px 25px a 10px 20px */
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 130px; /* Reducido de 140px a 130px */
+}
+
+.modal-formulario .btn-success:hover {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  border-color: transparent;
+}
+
+.modal-formulario .btn-secondary1 {
+  background: transparent;
+  color: #6c757d;
+  border: 2px solid #6c757d;
+  border-radius: 20px;
+  font-size: 0.85rem; /* Reducido de 0.9rem a 0.85rem */
+  font-weight: 600;
+  padding: 10px 20px; /* Reducido de 12px 25px a 10px 20px */
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 130px; /* Reducido de 140px a 130px */
+}
+
+.modal-formulario .btn-secondary:hover {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  border-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .gestion-productos-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .acciones-productos {
+    width: 100%;
+    max-width: none;
+  }
+
+  .acciones-productos .btn-primary {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-formulario {
+    max-width: 95%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .talles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+    gap: 8px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-formulario .btn-success,
+  .modal-formulario .btn-secondary {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .btn-header {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-formulario .card-body {
+    padding: 15px;
+  }
+
+  .talles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  }
+
+  .talle-input {
+    width: 45px;
+  }
+}
+
+
+.btn-agregar-producto:hover {
+  background-color: hsl(242, 87%, 62%);
+  border-color: hsl(242, 87%, 62%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Estilo específico para el botón Agregar Producto */
+.btn-agregar-producto {
+  background-color: hsl(242, 76%, 53%); /* Azul */
+  border: 1px solid hsl(242, 89%, 58%);
+  color: white;
+  font-size: 0.85rem; 
+  padding: 5px 20px;
+  border-radius: 8px;
+  margin-left: auto; 
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.btn-agregar-producto:hover {
+  background-color: hsl(242, 87%, 62%);
+  border-color: hsl(242, 87%, 62%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
